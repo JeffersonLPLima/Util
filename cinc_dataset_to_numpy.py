@@ -26,7 +26,7 @@ for f in files:
     data = np.nan_to_num(data)
     if(len(data)<=length):
         #pad with 0
-        data = np.pad(data, length-len(data), 'constant', constant_values=(0))
+        data = np.pad(data,(0,length-len(data)), 'constant')
     #signal length == FS_hz * duration_seconds
     train_set.append(data[:length])
 
